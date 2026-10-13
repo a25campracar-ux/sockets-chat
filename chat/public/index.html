@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- pantalla de entrada (pide el nombre) -->
+  <div id="entrada">
+    <h1>Entrar al chat</h1>
+    <form id="form-nombre">
+      <input type="text" id="input-nombre" placeholder="Tu nombre" maxlength="20">
+      <button>Entrar</button>
+    </form>
+    <p id="error-nombre"></p> <!-- aqui salen los errores del nombre -->
+  </div>
+
+
+  <!-- el chat, empieza escondido -->
+  <div id="chat" class="oculto">
+
+    <!-- arriba: titulo, nombre y si hay conexion -->
+    <div id="cabecera">
+      <span>Mi Chat</span>
+      <span id="mi-nombre"></span>
+      <span id="estado">Desconectado</span>
+    </div>
+
+    <!-- aqui se van poniendo los mensajes -->
+    <div id="mensajes"></div>
+
+    <!-- abajo: escribir y enviar -->
+    <form id="form-mensaje">
+      <input type="text" id="input-mensaje" placeholder="Escribe un mensaje" maxlength="500">
+      <button id="boton-enviar">Enviar</button>
+    </form>
+
+  </div>
+
+
+  <!-- esto lo crea socket.io solo, no hay que tener ese archivo -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- mi codigo, tiene que ir despues del de socket.io -->
+  <script src="client.js"></script>
+</body>
+</html>

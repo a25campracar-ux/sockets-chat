@@ -1,0 +1,55 @@
+body {
+  font-family: Arial;
+  background: #ddd;
+}
+
+/* las dos cajas */
+#entrada, #chat {
+  background: white;
+  width: 350px;
+  margin: 30px auto;
+  padding: 15px;
+}
+
+/* arriba del chat */
+#cabecera {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* los mensajes, con scroll */
+#mensajes {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid gray;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.mensaje {
+  margin-bottom: 5px;
+}
+
+.hora {
+  color: gray;
+  font-size: 12px;
+}
+
+/* abajo, escribir */
+#form-mensaje {
+  display: flex;
+}
+
+#input-mensaje {
+  flex: 1;
+}
+
+/* colores del estado */
+.conectado { color: green; }
+.desconectado { color: red; }
+
+#error-nombre { color: red; }
+
+/* esto al final */
+.oculto { display: none; }
